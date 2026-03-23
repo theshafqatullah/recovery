@@ -1,6 +1,16 @@
 import { MetadataRoute } from "next";
 import { dubaiAreas, serviceRoutes } from "@/lib/seo";
 
+const blogSlugs = [
+  "summer-car-care-tips-uae",
+  "car-breakdown-guide-dubai",
+  "uae-towing-laws-regulations",
+  "choose-recovery-service-dubai",
+  "desert-driving-safety-guide",
+  "car-battery-warning-signs",
+  "new-heavy-recovery-fleet",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://247uaerecovery.ae";
   const lastModified = new Date();
@@ -27,6 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Location area pages (Dubai areas)
   const locationPages = dubaiAreas.map((area) => `/locations/${area.slug}`);
+
+  // Blog post pages
+  const blogPages = blogSlugs.map((slug) => `/blog/${slug}`);
 
   // Legal pages
   const legalPages = ["/terms", "/privacy"];
@@ -60,6 +73,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
+    });
+  });
+
+  // Add blog pages
+  blogPages.forEach((route) => {
+    sitemap.push({
+      url: `${baseUrl}${route}`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
     });
   });
 

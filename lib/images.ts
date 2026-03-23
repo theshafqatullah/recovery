@@ -51,6 +51,19 @@ export const images = {
     highway: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
     desert: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&q=80",
     cityRoad: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
+    // Per-area images
+    downtownDubai: "https://images.unsplash.com/photo-1546412414-e1885259563a?w=800&q=80",
+    dubaiMarina: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&q=80",
+    palmJumeirah: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80",
+    businessBay: "https://images.unsplash.com/photo-1597659840241-37e2b7c2f7b9?w=800&q=80",
+    jumeirah: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=800&q=80",
+    alBarsha: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    deira: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
+    burDubai: "https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=800&q=80",
+    alQuoz: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+    jebelAli: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80",
+    sheikhZayedRoad: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    jbr: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&q=80",
   },
 
   // Team & About

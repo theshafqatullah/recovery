@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { images } from "@/lib/images";
-import { Truck, Phone, MapPin, Clock, CheckCircle2, ChevronRight, Globe, Mountain, Zap, AlertTriangle, Car, Mail } from "lucide-react";
+import { dubaiAreas, siteConfig } from "@/lib/seo";
+import { Phone, MapPin, Clock, CheckCircle2, ChevronRight, Globe, Mountain, Zap, AlertTriangle, Car } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Car Recovery Locations Dubai | Towing All Areas UAE | 15-30 Min",
@@ -39,69 +40,6 @@ export const metadata: Metadata = {
     canonical: "https://247uaerecovery.ae/locations",
   },
 };
-
-const dubaiAreas = [
-  {
-    name: "Downtown Dubai",
-    landmarks: ["Burj Khalifa", "Dubai Mall", "Dubai Fountain"],
-    responseTime: "15-20 min",
-  },
-  {
-    name: "Dubai Marina",
-    landmarks: ["Marina Walk", "JBR Beach", "Marina Mall"],
-    responseTime: "15-25 min",
-  },
-  {
-    name: "Jumeirah",
-    landmarks: ["Jumeirah Beach", "City Walk", "La Mer"],
-    responseTime: "15-20 min",
-  },
-  {
-    name: "Al Barsha",
-    landmarks: ["Mall of Emirates", "Barsha Heights", "Al Barsha Park"],
-    responseTime: "10-15 min",
-  },
-  {
-    name: "Deira",
-    landmarks: ["Gold Souk", "Deira City Centre", "Clock Tower"],
-    responseTime: "20-25 min",
-  },
-  {
-    name: "Business Bay",
-    landmarks: ["Bay Square", "Executive Towers", "Canal Walk"],
-    responseTime: "15-20 min",
-  },
-  {
-    name: "Palm Jumeirah",
-    landmarks: ["Atlantis", "The Pointe", "Nakheel Mall"],
-    responseTime: "20-30 min",
-  },
-  {
-    name: "JBR",
-    landmarks: ["The Walk", "Bluewaters Island", "Ain Dubai"],
-    responseTime: "15-25 min",
-  },
-  {
-    name: "Al Quoz",
-    landmarks: ["Alserkal Avenue", "Industrial Area", "Al Quoz Mall"],
-    responseTime: "10-15 min",
-  },
-  {
-    name: "Sheikh Zayed Road",
-    landmarks: ["Emirates Towers", "DIFC", "World Trade Centre"],
-    responseTime: "15-20 min",
-  },
-  {
-    name: "Bur Dubai",
-    landmarks: ["Meena Bazaar", "Dubai Frame", "Museum"],
-    responseTime: "15-20 min",
-  },
-  {
-    name: "Jebel Ali",
-    landmarks: ["Free Zone", "Ibn Battuta Mall", "Dragon Mart"],
-    responseTime: "20-30 min",
-  },
-];
 
 const otherEmirates = [
   {
@@ -153,59 +91,21 @@ const highways = [
 ];
 
 export default function LocationsPage() {
+  const locationsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://247uaerecovery.ae" },
+      { "@type": "ListItem", position: 2, name: "Locations", item: "https://247uaerecovery.ae/locations" },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="p-2 bg-orange-500 rounded-lg">
-                <Truck className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-zinc-900">
-                24/7 UAE Recovery
-              </span>
-            </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/services"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                Services
-              </Link>
-              <Link href="/locations" className="text-orange-500 font-medium">
-                Locations
-              </Link>
-              <Link
-                href="/about"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
-            <a
-              href="tel:+971504645696"
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">Call Now</span>
-            </a>
-          </div>
-        </div>
-      </nav>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locationsJsonLd) }}
+      />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 relative overflow-hidden">
@@ -217,7 +117,7 @@ export default function LocationsPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-900/95 via-zinc-900/80 to-zinc-900/60" />
+          <div className="absolute inset-0 bg-zinc-900/80" />
         </div>
         <div className="max-w-7xl mx-auto text-center relative z-10 py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -242,28 +142,36 @@ export default function LocationsPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {dubaiAreas.map((area, i) => (
-              <div
+              <Link
                 key={i}
-                className="bg-white rounded-xl p-5 border border-zinc-200 hover:border-orange-500 transition-colors"
+                href={`/locations/${area.slug}`}
+                className="bg-white rounded-xl overflow-hidden border border-zinc-200 hover:border-orange-500 transition-colors group"
               >
-                <div className="flex items-start gap-3">
-                  <div className="p-2 bg-orange-100 rounded-lg flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-orange-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-zinc-900 mb-1">
+                <div className="relative h-36">
+                  <Image
+                    src={images.locations[area.imageKey]}
+                    alt={`Car Recovery in ${area.name}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-zinc-900/50" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                    <h3 className="font-semibold text-white">
                       {area.name}
                     </h3>
-                    <div className="flex items-center gap-1 text-sm text-green-600 mb-2">
-                      <Clock className="w-3 h-3" />
-                      {area.responseTime}
-                    </div>
-                    <p className="text-xs text-zinc-500">
-                      {area.landmarks.join(" • ")}
-                    </p>
+                    <ChevronRight className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
-              </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-1 text-sm text-green-600 mb-2">
+                    <Clock className="w-3 h-3" />
+                    {area.responseTime}
+                  </div>
+                  <p className="text-xs text-zinc-500">
+                    {area.landmarks.join(" • ")}
+                  </p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -301,7 +209,7 @@ export default function LocationsPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/50 to-transparent" />
+                <div className="absolute inset-0 bg-zinc-900/60" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-2">
@@ -364,31 +272,44 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* Map Section Placeholder */}
+      {/* UAE Coverage */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 rounded-3xl p-12 text-center border border-zinc-300">
-            <div className="p-4 bg-orange-100 rounded-xl w-fit mx-auto mb-4">
-              <Globe className="w-12 h-12 text-orange-500" />
+          <div className="relative rounded-3xl overflow-hidden">
+            <div className="relative h-[400px]">
+              <Image
+                src={images.locations.cityRoad}
+                alt="UAE Map Coverage"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-zinc-900/75" />
             </div>
-            <h3 className="text-2xl font-bold text-zinc-900 mb-2">
-              Complete UAE Coverage
-            </h3>
-            <p className="text-zinc-600 max-w-lg mx-auto mb-6">
-              We cover all 7 Emirates with GPS-tracked fleet. From Dubai to Abu Dhabi, 
-              Sharjah to Fujairah - no location is too far!
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "RAK", "Fujairah", "UAQ"].map(
-                (city, i) => (
-                  <span
-                    key={i}
-                    className="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium"
-                  >
-                    {city}
-                  </span>
-                )
-              )}
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-xl p-8 md:p-12">
+                <div className="p-3 bg-orange-500/20 rounded-xl w-fit mb-4">
+                  <Globe className="w-8 h-8 text-orange-500" />
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-3">
+                  Complete UAE Coverage
+                </h3>
+                <p className="text-zinc-300 mb-6">
+                  We cover all 7 Emirates with a GPS-tracked fleet. From Dubai to Abu Dhabi,
+                  Sharjah to Fujairah — no location is too far!
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "RAK", "Fujairah", "UAQ"].map(
+                    (city, i) => (
+                      <span
+                        key={i}
+                        className="px-4 py-2 bg-white/15 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/20"
+                      >
+                        {city}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -425,19 +346,27 @@ export default function LocationsPage() {
                 <ChevronRight className="w-5 h-5" />
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-amber-100 to-amber-50 rounded-3xl p-8 border border-amber-200 text-center">
-              <div className="p-4 bg-amber-200 rounded-xl w-fit mx-auto mb-4">
-                <Mountain className="w-12 h-12 text-amber-600" />
+            <div className="relative rounded-3xl overflow-hidden">
+              <div className="relative h-[400px]">
+                <Image
+                  src={images.locations.desert}
+                  alt="Desert Off-Road Recovery Service Dubai"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-zinc-900/60" />
               </div>
-              <h3 className="text-2xl font-bold text-zinc-900 mb-2">
-                Off-Road Specialists
-              </h3>
-              <p className="text-zinc-600 mb-4">
-                Winch recovery • Sand extraction • Wadi rescue
-              </p>
-              <p className="text-amber-600 font-semibold">
-                Starting from AED 300
-              </p>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Off-Road Specialists
+                </h3>
+                <p className="text-zinc-300 mb-4">
+                  Winch recovery • Sand extraction • Wadi rescue
+                </p>
+                <p className="text-amber-400 font-semibold">
+                  Starting from AED 300
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -486,7 +415,7 @@ export default function LocationsPage() {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 text-white text-center">
+            <div className="bg-orange-500 rounded-3xl p-8 text-white text-center">
               <div className="p-4 bg-white/20 rounded-xl w-fit mx-auto mb-4">
                 <Zap className="w-12 h-12 text-white" />
               </div>
@@ -600,7 +529,7 @@ export default function LocationsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-20 px-4 bg-orange-500">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Stranded Somewhere?
@@ -626,53 +555,6 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="p-2 bg-orange-500 rounded-lg">
-                  <Truck className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-lg font-bold">24/7 UAE Recovery</span>
-              </div>
-              <p className="text-zinc-400 text-sm">
-                Professional car recovery and towing services in Dubai and UAE.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <Link href="/" className="block text-zinc-400 hover:text-orange-500">Home</Link>
-                <Link href="/services" className="block text-zinc-400 hover:text-orange-500">Services</Link>
-                <Link href="/locations" className="block text-zinc-400 hover:text-orange-500">Locations</Link>
-                <Link href="/contact" className="block text-zinc-400 hover:text-orange-500">Contact</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Coverage</h4>
-              <div className="space-y-2 text-zinc-400 text-sm">
-                <p>Dubai</p>
-                <p>Sharjah</p>
-                <p>Ajman</p>
-                <p>Abu Dhabi</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-zinc-400 text-sm">
-                <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +971 50 464 5696</p>
-                <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@247uaerecovery.ae</p>
-                <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Dubai, UAE</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-zinc-800 pt-8 text-center text-zinc-500 text-sm">
-            © 2026 24/7 UAE Recovery Services. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -371,37 +371,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Site-wide visual policy: no gradients, no shadows, no floating circles */
-[class*="bg-gradient-"] {
-  background-image: none !important;
-}
-
-[class*="shadow"],
-[class*="drop-shadow"] {
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
-
-.animate-gradient-text {
-  background: none !important;
-  -webkit-text-fill-color: currentColor !important;
-  color: inherit !important;
-  animation: none !important;
-}
-
-.animate-float {
-  animation: none !important;
-  transform: none !important;
-}
-
-.btn-shine::after {
-  display: none !important;
-}
-
-.stat-glow {
-  text-shadow: none !important;
-}
-
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,6 +11,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#f97316",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://247uaerecovery.ae"),
@@ -72,9 +78,7 @@ export const metadata: Metadata = {
       "Professional 24/7 car recovery, towing, and roadside assistance services in Dubai & UAE.",
     images: ["/og-image.jpg"],
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
+  verification: {},
   alternates: {
     canonical: "https://247uaerecovery.ae",
   },

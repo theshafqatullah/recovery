@@ -153,56 +153,28 @@ const faqCategories = [
 ];
 
 export default function FAQPage() {
+  // Build FAQ JSON-LD from question data
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqCategories.flatMap((cat) =>
+      cat.questions.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="p-2 bg-orange-500 rounded-lg">
-                <Truck className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-zinc-900">
-                24/7 UAE Recovery
-              </span>
-            </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/services"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                href="/faq"
-                className="text-orange-500 font-medium"
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/contact"
-                className="text-zinc-600 hover:text-orange-500 transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
-            <a
-              href="tel:+971504645696"
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">Call Now</span>
-            </a>
-          </div>
-        </div>
-      </nav>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
@@ -294,52 +266,6 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="p-2 bg-orange-500 rounded-lg">
-                  <Truck className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-lg font-bold">24/7 UAE Recovery</span>
-              </div>
-              <p className="text-zinc-400 text-sm">
-                Professional car recovery and towing services in Dubai and UAE.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <Link href="/" className="block text-zinc-400 hover:text-orange-500">Home</Link>
-                <Link href="/services" className="block text-zinc-400 hover:text-orange-500">Services</Link>
-                <Link href="/locations" className="block text-zinc-400 hover:text-orange-500">Locations</Link>
-                <Link href="/contact" className="block text-zinc-400 hover:text-orange-500">Contact</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <div className="space-y-2">
-                <Link href="/privacy" className="block text-zinc-400 hover:text-orange-500">Privacy Policy</Link>
-                <Link href="/terms" className="block text-zinc-400 hover:text-orange-500">Terms of Service</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-zinc-400 text-sm">
-                <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +971 50 464 5696</p>
-                <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@247uaerecovery.ae</p>
-                <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Dubai, UAE</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-zinc-800 pt-8 text-center text-zinc-500 text-sm">
-            © 2026 24/7 UAE Recovery Services. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

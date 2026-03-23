@@ -1,14 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Truck, Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-interface NavbarProps {
-  currentPage?: string;
-}
-
-export default function Navbar({ currentPage = "" }: NavbarProps) {
+export default function Navbar() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const mainNavLinks = [
     { href: "/", label: "Home" },
@@ -32,7 +35,7 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
   const allNavLinks = [...mainNavLinks, ...moreNavLinks];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -41,7 +44,7 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
               <Truck className="w-6 h-6 text-white" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-xl font-bold text-zinc-900 dark:text-white">
+              <span className="text-xl font-bold text-zinc-900">
                 24/7 UAE
               </span>
               <span className="text-xl font-bold text-orange-500"> Recovery</span>
@@ -55,13 +58,13 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
                 key={link.href}
                 href={link.href}
                 className={`font-medium transition-colors relative py-2 ${
-                  currentPage === link.href
+                  isActive(link.href)
                     ? "text-orange-500"
-                    : "text-zinc-600 dark:text-zinc-400 hover:text-orange-500"
+                    : "text-zinc-600 hover:text-orange-500"
                 }`}
               >
                 {link.label}
-                {currentPage === link.href && (
+                {isActive(link.href) && (
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 rounded-full" />
                 )}
               </Link>
@@ -74,23 +77,23 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
             >
               <button
                 className={`font-medium transition-colors flex items-center gap-1 py-2 ${
-                  moreNavLinks.some(link => currentPage === link.href)
+                  moreNavLinks.some(link => isActive(link.href))
                     ? "text-orange-500"
-                    : "text-zinc-600 dark:text-zinc-400 hover:text-orange-500"
+                    : "text-zinc-600 hover:text-orange-500"
                 }`}
               >
                 More <ChevronDown className={`w-4 h-4 transition-transform ${moreDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               {moreDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 py-2 z-50">
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-xl border border-zinc-200 py-2 z-50">
                   {moreNavLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       className={`block px-4 py-2 text-sm font-medium transition-colors ${
-                        currentPage === link.href
-                          ? "text-orange-500 bg-orange-50 dark:bg-orange-500/10"
-                          : "text-zinc-600 dark:text-zinc-400 hover:text-orange-500 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+                        isActive(link.href)
+                          ? "text-orange-500 bg-orange-50"
+                          : "text-zinc-600 hover:text-orange-500 hover:bg-zinc-50"
                       }`}
                     >
                       {link.label}
@@ -123,7 +126,7 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-zinc-600 dark:text-zinc-400"
+              className="lg:hidden p-2 text-zinc-600"
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -136,7 +139,7 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-zinc-200 dark:border-zinc-800 max-h-[70vh] overflow-y-auto">
+          <div className="lg:hidden py-4 border-t border-zinc-200 max-h-[70vh] overflow-y-auto">
             <div className="flex flex-col gap-1">
               {allNavLinks.map((link) => (
                 <Link
@@ -144,9 +147,9 @@ export default function Navbar({ currentPage = "" }: NavbarProps) {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3 rounded-xl font-medium transition-colors ${
-                    currentPage === link.href
+                    isActive(link.href)
                       ? "bg-orange-500/10 text-orange-500"
-                      : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                      : "text-zinc-600 hover:bg-zinc-100"
                   }`}
                 >
                   {link.label}

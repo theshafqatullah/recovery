@@ -62,6 +62,9 @@ export default function Footer() {
                 { href: "/about", label: "About Us" },
                 { href: "/contact", label: "Contact Us" },
                 { href: "/faq", label: "FAQ" },
+                { href: "/blog", label: "Blog" },
+                { href: "/fleet", label: "Our Fleet" },
+                { href: "/emergency-tips", label: "Emergency Tips" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -86,10 +89,13 @@ export default function Footer() {
                 { href: "/services/flatbed-towing", label: "Flatbed Towing" },
                 { href: "/services/battery-jumpstart", label: "Battery Jump Start" },
                 { href: "/services/flat-tyre", label: "Flat Tyre" },
+                { href: "/services/fuel-delivery", label: "Fuel Delivery" },
+                { href: "/services/key-lockout", label: "Key Lockout" },
                 { href: "/services/motorcycle-recovery", label: "Motorcycle Recovery" },
                 { href: "/services/off-road-recovery", label: "Desert Recovery" },
                 { href: "/services/heavy-vehicle", label: "Heavy Vehicle" },
                 { href: "/services/long-distance", label: "Long Distance" },
+                { href: "/services/luxury-transport", label: "Luxury Transport" },
               ].map((service) => (
                 <li key={service.href}>
                   <Link

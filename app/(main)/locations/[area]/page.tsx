@@ -3,17 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
-  Truck,
   Phone,
   MapPin,
   Clock,
-  CheckCircle2,
   ChevronRight,
   Star,
   Shield,
   Zap,
   MessageCircle,
-  Mail,
 } from "lucide-react";
 import { dubaiAreas, generateLocationMetadata, siteConfig } from "@/lib/seo";
 import { images } from "@/lib/images";
@@ -84,39 +81,54 @@ export default async function LocationAreaPage({
     .filter((a) => a.slug !== area.slug)
     .slice(0, 4);
 
+  // JSON-LD structured data for this location
+  const locationJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        name: `24/7 UAE Recovery - ${area.name}`,
+        description: area.description,
+        url: `${siteConfig.url}/locations/${area.slug}`,
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: area.name,
+          addressRegion: "Dubai",
+          addressCountry: "AE",
+        },
+        areaServed: {
+          "@type": "Place",
+          name: area.name,
+        },
+        parentOrganization: {
+          "@id": `${siteConfig.url}/#business`,
+        },
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+          { "@type": "ListItem", position: 2, name: "Locations", item: `${siteConfig.url}/locations` },
+          { "@type": "ListItem", position: 3, name: area.name, item: `${siteConfig.url}/locations/${area.slug}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="p-2 bg-orange-500 rounded-lg">
-                <Truck className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-zinc-900">
-                24/7 UAE Recovery
-              </span>
-            </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-zinc-600 hover:text-orange-500">Home</Link>
-              <Link href="/services" className="text-zinc-600 hover:text-orange-500">Services</Link>
-              <Link href="/locations" className="text-orange-500 font-medium">Locations</Link>
-              <Link href="/about" className="text-zinc-600 hover:text-orange-500">About</Link>
-              <Link href="/contact" className="text-zinc-600 hover:text-orange-500">Contact</Link>
-            </div>
-            <a
-              href={`tel:${siteConfig.phone}`}
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">Call Now</span>
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Breadcrumb */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locationJsonLd) }}
+      />
       <section className="pt-24 pb-4 px-4 bg-zinc-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-sm text-zinc-500">
@@ -130,7 +142,7 @@ export default async function LocationAreaPage({
       </section>
 
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+      <section className="py-16 px-4 bg-zinc-900">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -144,8 +156,7 @@ export default async function LocationAreaPage({
                 Car Recovery in <span className="text-orange-500">{area.name}</span>
               </h1>
               <p className="text-lg text-zinc-400 mb-4">
-                Stranded near {area.landmarks[0]} or anywhere in {area.name}? Our recovery 
-                trucks are strategically positioned across Dubai for rapid response.
+                {area.description}
               </p>
               <div className="bg-zinc-800/50 rounded-xl p-4 mb-8">
                 <div className="flex items-center gap-3 mb-3">
@@ -178,12 +189,12 @@ export default async function LocationAreaPage({
             <div className="relative rounded-3xl overflow-hidden">
               <div className="relative h-80">
                 <Image
-                  src={images.locations.dubai}
+                  src={images.locations[area.imageKey]}
                   alt={`Car Recovery Service in ${area.name}`}
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/50 to-transparent" />
+                <div className="absolute inset-0 bg-zinc-900/60" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-xl font-bold text-white mb-2">
@@ -320,7 +331,7 @@ export default async function LocationAreaPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-20 px-4 bg-orange-500">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Stranded in {area.name}? We&apos;re On Our Way.
@@ -348,53 +359,6 @@ export default async function LocationAreaPage({
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="p-2 bg-orange-500 rounded-lg">
-                  <Truck className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-lg font-bold">24/7 UAE Recovery</span>
-              </div>
-              <p className="text-zinc-400 text-sm">
-                Professional car recovery and towing services in {area.name} and all of Dubai.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <Link href="/" className="block text-zinc-400 hover:text-orange-500">Home</Link>
-                <Link href="/services" className="block text-zinc-400 hover:text-orange-500">Services</Link>
-                <Link href="/locations" className="block text-zinc-400 hover:text-orange-500">Locations</Link>
-                <Link href="/contact" className="block text-zinc-400 hover:text-orange-500">Contact</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">{area.name} Services</h4>
-              <div className="space-y-2 text-zinc-400 text-sm">
-                <p>Car Recovery</p>
-                <p>Flatbed Towing</p>
-                <p>Battery Jump Start</p>
-                <p>Flat Tyre Service</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-zinc-400 text-sm">
-                <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> {siteConfig.phoneFormatted}</p>
-                <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> {siteConfig.email}</p>
-                <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Dubai, UAE</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-zinc-800 pt-8 text-center text-zinc-500 text-sm">
-            © 2026 24/7 UAE Recovery Services. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
