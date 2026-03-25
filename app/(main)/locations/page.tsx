@@ -6,9 +6,9 @@ import { dubaiAreas, siteConfig } from "@/lib/seo";
 import { Phone, MapPin, Clock, CheckCircle2, ChevronRight, Globe, Mountain, Zap, AlertTriangle, Car } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Car Recovery Locations Dubai | Towing All Areas UAE | 15-30 Min",
+  title: "Car Recovery Locations Dubai | 39+ Areas Covered | 15-30 Min Response",
   description:
-    "Fast car recovery across Dubai: Downtown, Marina, Palm Jumeirah, Business Bay, JBR, Al Barsha. Plus Abu Dhabi, Sharjah, Ajman, RAK. 15-30 min response. GPS tracked fleet.",
+    "Fast car recovery across all Dubai areas: Downtown, Marina, Palm Jumeirah, Business Bay, JBR, Al Barsha, Silicon Oasis, Dubailand, Al Qudra, Al Lahbab + 30 more. Plus Abu Dhabi, Sharjah, Ajman, RAK. 15-30 min response. GPS tracked.",
   keywords: [
     "car recovery Dubai areas",
     "towing service locations UAE",
@@ -219,7 +219,7 @@ export default function LocationsPage() {
                   We provide fast highway recovery service with proper safety measures
                 </p>
                 <a
-                  href="tel:+971504645696"
+                  href="tel:+971569773000"
                   className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-colors"
                 >
                   <Phone className="w-5 h-5" />
@@ -539,14 +539,14 @@ export default function LocationsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center justify-center gap-2 bg-white text-orange-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-zinc-100 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              +971 50 464 5696
+              +971 56 977 3000
             </a>
             <a
-              href="https://wa.me/971504645696"
+              href="https://wa.me/971569773000"
               className="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors"
             >
               Share Location on WhatsApp

@@ -27,7 +27,7 @@ import { images } from "@/lib/images";
 export const metadata: Metadata = {
   title: "24/7 Car Recovery Dubai | Towing Services UAE - AED 150 | Fast Response",
   description:
-    "Emergency car recovery in Dubai from AED 150. 24/7 towing, accident recovery, flatbed service, roadside assistance across all UAE. GPS tracked fleet, 15-30 min response. Insurance approved. Call +971 50 464 5696",
+    "Emergency car recovery in Dubai from AED 150. 24/7 towing, accident recovery, flatbed service, roadside assistance across all UAE. GPS tracked fleet, 15-30 min response. Insurance approved. Call +971 56 977 3000",
   keywords: [
     "car recovery Dubai",
     "towing service Dubai",
@@ -86,7 +86,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-on-load" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                 <a
-                  href="tel:+971504645696"
+                  href="tel:+971569773000"
                   className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all animate-pulse-glow btn-shine hover:scale-105"
                 >
                   <Phone className="w-5 h-5 animate-wiggle" />
@@ -424,14 +424,14 @@ export default function Home() {
             </div>
             <div className="flex gap-3">
               <a
-                href="tel:+971504645696"
+                href="tel:+971569773000"
                 className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-full font-medium transition-all btn-shine hover:scale-105 animate-pulse-glow"
               >
                 <Phone className="w-4 h-4" />
                 Call Now
               </a>
               <a
-                href="https://wa.me/971504645696?text=Hi%2C%20I%20need%20help"
+                href="https://wa.me/971569773000?text=Hi%2C%20I%20need%20help"
                 className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-medium transition-all hover:scale-105"
               >
                 <MessageCircle className="w-4 h-4" />
@@ -766,14 +766,14 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center justify-center gap-2 bg-white text-orange-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-zinc-100 transition-all btn-shine hover:scale-105"
             >
               <Phone className="w-5 h-5 animate-wiggle" />
-              +971 50 464 5696
+              +971 56 977 3000
             </a>
             <a
-              href="https://wa.me/971504645696?text=Hi%2C%20I%20need%20vehicle%20recovery%20assistance"
+              href="https://wa.me/971569773000?text=Hi%2C%20I%20need%20vehicle%20recovery%20assistance"
               className="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-all hover:scale-105"
             >
               <MessageCircle className="w-5 h-5" />

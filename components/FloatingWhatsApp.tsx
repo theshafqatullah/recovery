@@ -22,7 +22,7 @@ export default function FloatingWhatsApp() {
           <div className="flex flex-col gap-3 mb-2 animate-fadeIn">
             {/* Call Button */}
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-full shadow-lg transition-all hover:scale-105"
             >
               <Phone className="w-5 h-5" />
@@ -31,7 +31,7 @@ export default function FloatingWhatsApp() {
             
             {/* WhatsApp Chat */}
             <a
-              href="https://wa.me/971504645696?text=Hi%2C%20I%20need%20vehicle%20recovery%20assistance"
+              href="https://wa.me/971569773000?text=Hi%2C%20I%20need%20vehicle%20recovery%20assistance"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg transition-all hover:scale-105"
@@ -79,7 +79,7 @@ export default function FloatingWhatsApp() {
       
       {/* Floating Call Button - Left Side */}
       <a
-        href="tel:+971504645696"
+        href="tel:+971569773000"
         className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-full shadow-lg transition-all hover:scale-105 md:hidden"
       >
         <Phone className="w-5 h-5" />

@@ -66,7 +66,7 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl p-4 transition-colors"
             >
               <div className="p-3 bg-white/20 rounded-full">
@@ -74,11 +74,11 @@ export default function ContactPageClient() {
               </div>
               <div className="text-left">
                 <p className="text-white/80 text-sm">Call Us</p>
-                <p className="text-white font-semibold">+971 50 464 5696</p>
+                <p className="text-white font-semibold">+971 56 977 3000</p>
               </div>
             </a>
             <a
-              href="https://wa.me/971504645696"
+              href="https://wa.me/971569773000"
               className="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl p-4 transition-colors"
             >
               <div className="p-3 bg-white/20 rounded-full">
@@ -232,10 +232,10 @@ export default function ContactPageClient() {
                         Phone
                       </p>
                       <a
-                        href="tel:+971504645696"
+                        href="tel:+971569773000"
                         className="text-zinc-600 hover:text-orange-500"
                       >
-                        +971 50 464 5696
+                        +971 56 977 3000
                       </a>
                     </div>
                   </div>
@@ -291,7 +291,7 @@ export default function ContactPageClient() {
                   Skip the form. Call us directly and we&apos;ll dispatch a truck in minutes.
                 </p>
                 <a
-                  href="tel:+971504645696"
+                  href="tel:+971569773000"
                   className="inline-flex items-center gap-2 bg-white text-red-500 px-6 py-3 rounded-full font-semibold hover:bg-red-50 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
@@ -306,7 +306,7 @@ export default function ContactPageClient() {
                   Drop a pin and type your problem. Our dispatcher will confirm ETA instantly.
                 </p>
                 <a
-                  href="https://wa.me/971504645696"
+                  href="https://wa.me/971569773000"
                   className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
@@ -394,7 +394,7 @@ export default function ContactPageClient() {
                 No matter what time it is, we&apos;re ready to help.
               </p>
               <a
-                href="tel:+971504645696"
+                href="tel:+971569773000"
                 className="inline-flex items-center gap-2 bg-white text-orange-500 px-6 py-3 rounded-full font-semibold hover:bg-orange-50 transition-colors"
               >
                 <Phone className="w-5 h-5" />
@@ -472,7 +472,7 @@ export default function ContactPageClient() {
             {[
               {
                 q: "What's the fastest way to get help?",
-                a: "For emergencies, calling our hotline at +971 50 464 5696 is the fastest. For non-urgent requests, WhatsApp or the contact form works great.",
+                a: "For emergencies, calling our hotline at +971 56 977 3000 is the fastest. For non-urgent requests, WhatsApp or the contact form works great.",
               },
               {
                 q: "Do I need to pay upfront?",

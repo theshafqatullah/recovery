@@ -116,7 +116,7 @@ Any warning light in summer should be addressed immediately. What might be a min
 
 ## Need Help? We're Here 24/7
 
-If you do experience a breakdown this summer, 24/7 UAE Recovery is standing by across all emirates. Call +971 50 464 5696 for immediate assistance.
+If you do experience a breakdown this summer, 24/7 UAE Recovery is standing by across all emirates. Call +971 56 977 3000 for immediate assistance.
     `,
   },
   {
@@ -159,7 +159,7 @@ A breakdown is stressful, but panicking makes things worse. Here's exactly what 
 **Emergency Numbers:**
 - Police: 999
 - Ambulance: 998
-- 24/7 UAE Recovery: +971 50 464 5696
+- 24/7 UAE Recovery: +971 56 977 3000
 
 When calling, be ready to provide:
 - Your exact location (use Google Maps)
@@ -193,7 +193,7 @@ When calling, be ready to provide:
 
 Our recovery team operates across all Dubai areas and UAE emirates. Average response time: 20-30 minutes. We handle everything from flat tires to full vehicle recovery.
 
-**Call us anytime: +971 50 464 5696**
+**Call us anytime: +971 56 977 3000**
     `,
   },
   {
@@ -287,7 +287,7 @@ We are a fully licensed, RTA-compliant recovery service:
 - GPS-tracked fleet
 - Official documentation provided
 
-**Questions? Call us: +971 50 464 5696**
+**Questions? Call us: +971 56 977 3000**
     `,
   },
   {
@@ -368,7 +368,7 @@ We check every box:
 - Insurance partnerships
 - 4.9 customer rating
 
-**Available 24/7: +971 50 464 5696**
+**Available 24/7: +971 56 977 3000**
     `,
   },
   {
@@ -461,7 +461,7 @@ Our specialized desert recovery team includes:
 
 We've rescued hundreds of vehicles from UAE deserts. Don't wait until you're in trouble—save our number.
 
-**Desert Recovery Hotline: +971 50 464 5696**
+**Desert Recovery Hotline: +971 56 977 3000**
     `,
   },
   {
@@ -535,7 +535,7 @@ We offer:
 - Battery testing: Free with any service
 - New battery supply and fitting: From AED 250
 
-**Need a jump? Call: +971 50 464 5696**
+**Need a jump? Call: +971 56 977 3000**
     `,
   },
   {
@@ -604,7 +604,7 @@ Our heavy recovery services now cover:
 
 For heavy vehicle recovery or fleet emergencies, contact our dedicated heavy recovery team.
 
-**24/7 Heavy Recovery: +971 50 464 5696**
+**24/7 Heavy Recovery: +971 56 977 3000**
     `,
   },
 ];
@@ -786,11 +786,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <h3 className="font-bold text-lg mb-2">Need Help Now?</h3>
                 <p className="text-white/80 text-sm mb-4">24/7 recovery across all UAE emirates</p>
                 <a
-                  href="tel:+971504645696"
+                  href="tel:+971569773000"
                   className="flex items-center justify-center gap-2 bg-white text-orange-500 px-4 py-3 rounded-lg font-semibold hover:bg-zinc-100 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  +971 50 464 5696
+                  +971 56 977 3000
                 </a>
               </div>
             </aside>
@@ -843,14 +843,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center justify-center gap-2 bg-white text-orange-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-zinc-100 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              +971 50 464 5696
+              +971 56 977 3000
             </a>
             <a
-              href="https://wa.me/971504645696"
+              href="https://wa.me/971569773000"
               className="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />

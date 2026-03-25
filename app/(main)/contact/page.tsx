@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactPageClient from "@/components/ContactPageClient";
 import { primaryKeywords, serviceKeywords, siteConfig } from "@/lib/seo";
 
-const pageTitle = "Contact 24/7 Car Recovery Dubai | Call +971 50 464 5696";
+const pageTitle = "Contact 24/7 Car Recovery Dubai | Call +971 56 977 3000";
 const pageDescription =
   "Contact 24/7 UAE Recovery for emergency towing, roadside assistance, battery jump start, flat tyre help, and accident recovery across Dubai and all Emirates.";
 const canonicalPath = "/contact";
@@ -67,7 +67,7 @@ export default function ContactPage() {
     about: {
       "@type": "LocalBusiness",
       name: siteConfig.name,
-      telephone: "+971504645696",
+      telephone: "+971569773000",
       email: "info@247uaerecovery.ae",
       areaServed: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"],
       availableLanguage: ["English", "Arabic", "Hindi", "Urdu"],

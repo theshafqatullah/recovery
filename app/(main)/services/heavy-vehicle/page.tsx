@@ -72,14 +72,14 @@ export default function HeavyVehicleRecoveryPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="tel:+971504645696"
+                  href="tel:+971569773000"
                   className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   Emergency Line
                 </a>
                 <a
-                  href="https://wa.me/971504645696"
+                  href="https://wa.me/971569773000"
                   className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors"
                 >
                   WhatsApp
@@ -263,14 +263,14 @@ export default function HeavyVehicleRecoveryPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors"
             >
               <Phone className="w-5 h-5" />
-              +971 50 464 5696
+              +971 56 977 3000
             </a>
             <a
-              href="https://wa.me/971504645696?text=Hi%2C%20I%20need%20heavy%20vehicle%20recovery"
+              href="https://wa.me/971569773000?text=Hi%2C%20I%20need%20heavy%20vehicle%20recovery"
               className="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors"
             >
               <MessageSquare className="w-5 h-5" /> WhatsApp Us

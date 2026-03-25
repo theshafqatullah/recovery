@@ -107,7 +107,7 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/971504645696"
+              href="https://wa.me/971569773000"
               className="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2.5 rounded-full font-medium transition-all hover:scale-105 shadow-lg shadow-green-500/20"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ export default function Navbar() {
               <span className="hidden md:inline">WhatsApp</span>
             </a>
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2.5 rounded-full font-medium transition-all hover:scale-105 shadow-lg shadow-orange-500/20"
             >
               <Phone className="w-4 h-4" />

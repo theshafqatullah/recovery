@@ -116,24 +116,24 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+971504645696"
-                  className="flex items-start gap-3 text-zinc-400 hover:text-orange-500 transition-colors"
-                >
-                  <Phone className="w-5 h-5 mt-0.5 text-orange-500" />
-                  <div>
-                    <p className="font-medium text-white">+971 50 464 5696</p>
-                    <p className="text-sm">24/7 Emergency Line</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
                   href="tel:+971569773000"
                   className="flex items-start gap-3 text-zinc-400 hover:text-orange-500 transition-colors"
                 >
                   <Phone className="w-5 h-5 mt-0.5 text-orange-500" />
                   <div>
                     <p className="font-medium text-white">+971 56 977 3000</p>
+                    <p className="text-sm">24/7 Emergency Line</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+971504645696"
+                  className="flex items-start gap-3 text-zinc-400 hover:text-orange-500 transition-colors"
+                >
+                  <Phone className="w-5 h-5 mt-0.5 text-orange-500" />
+                  <div>
+                    <p className="font-medium text-white">+971 50 464 5696</p>
                     <p className="text-sm">Alternative Line</p>
                   </div>
                 </a>

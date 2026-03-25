@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | 24/7 UAE Recovery",
   },
   description:
-    "Professional 24/7 car recovery, towing, and roadside assistance services in Dubai & UAE. Fast response, affordable rates. Call +971 50 464 5696 for emergency help.",
+    "Professional 24/7 car recovery, towing, and roadside assistance services in Dubai & UAE. Fast response, affordable rates. Call +971 56 977 3000 for emergency help.",
   keywords: [
     "car recovery Dubai",
     "towing service Dubai",
@@ -95,7 +95,7 @@ const jsonLd = {
       description:
         "Professional 24/7 car recovery, towing, and roadside assistance services across Dubai and UAE.",
       url: "https://247uaerecovery.ae",
-      telephone: "+971504645696",
+      telephone: "+971569773000",
       email: "info@247uaerecovery.ae",
       address: {
         "@type": "PostalAddress",

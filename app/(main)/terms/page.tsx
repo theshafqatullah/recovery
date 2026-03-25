@@ -197,7 +197,7 @@ export default function TermsOfServicePage() {
           </p>
           <ul className="list-disc pl-6 text-zinc-600 mb-4 space-y-2">
             <li>Email: legal@247uaerecovery.ae</li>
-            <li>Phone: +971 50 464 5696</li>
+            <li>Phone: +971 56 977 3000</li>
             <li>Address: Dubai, United Arab Emirates</li>
           </ul>
         </div>

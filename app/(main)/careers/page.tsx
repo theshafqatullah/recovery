@@ -431,7 +431,7 @@ export default function CareersPage() {
               careers@247uaerecovery.ae
             </a>
             <a
-              href="https://wa.me/971504645696?text=Hi%2C%20I%27m%20interested%20in%20job%20opportunities"
+              href="https://wa.me/971569773000?text=Hi%2C%20I%27m%20interested%20in%20job%20opportunities"
               className="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />

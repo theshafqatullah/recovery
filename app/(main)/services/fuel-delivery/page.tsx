@@ -80,14 +80,14 @@ export default function FuelDeliveryPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+971504645696"
+                  href="tel:+971569773000"
                   className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   Order Fuel
                 </a>
                 <a
-                  href="https://wa.me/971504645696"
+                  href="https://wa.me/971569773000"
                   className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors border border-white/20"
                 >
                   WhatsApp Us
@@ -265,14 +265,14 @@ export default function FuelDeliveryPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
-              href="tel:+971504645696"
+              href="tel:+971569773000"
               className="flex items-center justify-center gap-2 bg-white text-green-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-zinc-100 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              +971 50 464 5696
+              +971 56 977 3000
             </a>
             <a
-              href="https://wa.me/971504645696?text=Hi%2C%20I%27ve%20run%20out%20of%20fuel%20and%20need%20delivery"
+              href="https://wa.me/971569773000?text=Hi%2C%20I%27ve%20run%20out%20of%20fuel%20and%20need%20delivery"
               className="flex items-center justify-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-colors border border-white/30"
             >
               <Fuel className="w-5 h-5" /> WhatsApp Location

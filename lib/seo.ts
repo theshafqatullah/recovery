@@ -5,12 +5,12 @@ export const siteConfig = {
   name: "24/7 UAE Recovery",
   domain: "247uaerecovery.ae",
   url: "https://247uaerecovery.ae",
-  phone: "+971504645696",
-  phoneFormatted: "+971 50 464 5696",
-  phone2: "+971569773000",
-  phone2Formatted: "+971 56 977 3000",
+  phone: "+971569773000",
+  phoneFormatted: "+971 56 977 3000",
+  phone2: "+971504645696",
+  phone2Formatted: "+971 50 464 5696",
   email: "info@247uaerecovery.ae",
-  whatsapp: "971504645696",
+  whatsapp: "971569773000",
   owner: "Sajad Dad",
   address: {
     street: "Al Quoz Industrial Area 3",
@@ -268,6 +268,222 @@ export const dubaiAreas = [
     imageKey: "jbr" as const,
     description: "The Walk, Ain Dubai, and Bluewaters — JBR's busy tourist and residential district. We access even the tightest parking areas with our compact recovery units.",
   },
+  {
+    slug: "al-awir",
+    name: "Al Awir",
+    landmarks: ["Al Awir Shabiya", "Camel Market", "Al Awir Industrial"],
+    responseTime: "25-40 min",
+    imageKey: "alAwir" as const,
+    description: "Al Awir's industrial zone and residential shabiya area. Our recovery trucks are familiar with this expansive district near the Dubai-Al Ain Road corridor.",
+  },
+  {
+    slug: "ras-al-khor",
+    name: "Ras Al Khor",
+    landmarks: ["Ras Al Khor Industrial", "Wildlife Sanctuary", "Dubai Creek"],
+    responseTime: "20-30 min",
+    imageKey: "rasAlKhor" as const,
+    description: "Ras Al Khor sits at the end of Dubai Creek with its industrial area and famous wildlife sanctuary. We provide fast recovery along its busy industrial roads.",
+  },
+  {
+    slug: "nad-al-shiba",
+    name: "Nad Al Shiba",
+    landmarks: ["Nad Al Shiba 1-4", "Horse Racecourse", "Meydan"],
+    responseTime: "15-25 min",
+    imageKey: "nadAlShiba" as const,
+    description: "Nad Al Shiba's residential neighbourhoods from 1 through 4 plus the Meydan Racecourse area. We cover every corner of this well-connected district.",
+  },
+  {
+    slug: "dubailand",
+    name: "Dubailand",
+    landmarks: ["Miracle Garden", "Global Village", "Butterfly Garden"],
+    responseTime: "20-30 min",
+    imageKey: "dubailand" as const,
+    description: "Dubailand is Dubai's sprawling entertainment and residential district. From Miracle Garden to Global Village, our trucks navigate this ever-growing area daily.",
+  },
+  {
+    slug: "academic-city",
+    name: "Academic City",
+    landmarks: ["Dubai Academic City", "DIAC", "University Hub"],
+    responseTime: "20-30 min",
+    imageKey: "academicCity" as const,
+    description: "Dubai Academic City's university campus district. Students and staff rely on our fast recovery service when vehicles break down in this busy educational zone.",
+  },
+  {
+    slug: "dubai-silicon-oasis",
+    name: "Dubai Silicon Oasis",
+    landmarks: ["DSO", "Silicon Central Mall", "IT Hub"],
+    responseTime: "20-30 min",
+    imageKey: "siliconOasis" as const,
+    description: "Dubai Silicon Oasis is a thriving tech free zone with residential towers and busy roads. Our recovery trucks serve DSO's community around the clock.",
+  },
+  {
+    slug: "al-lisaili",
+    name: "Al Lisaili",
+    landmarks: ["Camel Market", "Endurance City", "Al Lisaili Road"],
+    responseTime: "30-45 min",
+    imageKey: "alLisaili" as const,
+    description: "Al Lisaili is a vast area south of Dubai known for its camel market and endurance village. Our desert-ready trucks navigate the area's long stretches with ease.",
+  },
+  {
+    slug: "al-qudra",
+    name: "Al Qudra",
+    landmarks: ["Love Lake", "Last Exit Al Qudra", "Skydive Dubai DZ", "Al Qudra Cycling Track"],
+    responseTime: "30-45 min",
+    imageKey: "alQudra" as const,
+    description: "Al Qudra's desert area is popular for cycling, Love Lake visits, and desert drives. Breakdowns here need a recovery team that knows the desert — that's us.",
+  },
+  {
+    slug: "al-lahbab",
+    name: "Al Lahbab",
+    landmarks: ["Big Red Dunes", "Lahbab Desert", "Lahbab Road"],
+    responseTime: "35-50 min",
+    imageKey: "alLahbab" as const,
+    description: "Al Lahbab is famous for the Big Red dune and desert safari tracks. Our heavy-duty winch trucks are equipped to recover vehicles stuck in deep sand here.",
+  },
+  {
+    slug: "warsan",
+    name: "Warsan",
+    landmarks: ["Warsan 1-3", "International City", "Dragon Mart"],
+    responseTime: "20-30 min",
+    imageKey: "warsan" as const,
+    description: "Warsan covers a wide residential and commercial area near International City. Our recovery team provides fast response across Warsan 1, 2, and 3.",
+  },
+  {
+    slug: "liwan",
+    name: "Liwan",
+    landmarks: ["Liwan", "Queue Point", "Mazaya"],
+    responseTime: "20-30 min",
+    imageKey: "liwan" as const,
+    description: "Liwan is a growing residential community in Dubailand. Our recovery trucks reach Liwan's towers and roads quickly for any breakdown or towing need.",
+  },
+  {
+    slug: "town-square",
+    name: "Town Square",
+    landmarks: ["Town Square Park", "Nshama", "Town Square Mall"],
+    responseTime: "25-35 min",
+    imageKey: "townSquare" as const,
+    description: "Nshama Town Square is a large master-planned community. We provide recovery and towing services to this residential district with reliable response times.",
+  },
+  {
+    slug: "damac-hills-2",
+    name: "Damac Hills 2",
+    landmarks: ["DAMAC Hills 2", "Akoya Oxygen", "Community Park"],
+    responseTime: "25-35 min",
+    imageKey: "damacHills2" as const,
+    description: "DAMAC Hills 2 (Akoya Oxygen) is a developing residential community. Our recovery fleet covers this area's main roads and internal community streets.",
+  },
+  {
+    slug: "the-valley",
+    name: "The Valley by Emaar",
+    landmarks: ["The Valley", "Emaar Development", "Al Ain Road Access"],
+    responseTime: "30-40 min",
+    imageKey: "theValley" as const,
+    description: "The Valley by Emaar is a new residential community along the Dubai-Al Ain Road. We serve this growing neighbourhood with fast, professional vehicle recovery.",
+  },
+  {
+    slug: "al-faqqa",
+    name: "Al Faqqa",
+    landmarks: ["Al Faqqa Village", "Eastern Desert", "Hatta Road"],
+    responseTime: "45-60 min",
+    imageKey: "alFaqqa" as const,
+    description: "Al Faqqa is a remote eastern area near the Oman border. Our desert-equipped recovery trucks can reach this far-flung location for any vehicle emergency.",
+  },
+  {
+    slug: "al-hayer",
+    name: "Al Hayer",
+    landmarks: ["Al Hayer", "Desert Area", "Al Ain Border"],
+    responseTime: "45-60 min",
+    imageKey: "alHayer" as const,
+    description: "Al Hayer is a remote desert area between Dubai and Al Ain. Our experienced drivers know the terrain and can recover vehicles stuck in this challenging area.",
+  },
+  {
+    slug: "margham",
+    name: "Margham",
+    landmarks: ["Margham Desert", "Camel Farms", "Desert Road"],
+    responseTime: "40-55 min",
+    imageKey: "margham" as const,
+    description: "Margham's vast desert landscape is home to camel farms and off-road trails. We dispatch recovery trucks to this remote area for any vehicle breakdown.",
+  },
+  {
+    slug: "umm-nahad",
+    name: "Umm Nahad",
+    landmarks: ["Umm Nahad", "Residential Area", "Local Roads"],
+    responseTime: "20-30 min",
+    imageKey: "ummNahad" as const,
+    description: "Umm Nahad is a residential area in Dubai with local roads and community spaces. Our recovery team provides fast service to this neighbourhood.",
+  },
+  {
+    slug: "bab-al-shams",
+    name: "Bab Al Shams",
+    landmarks: ["Bab Al Shams Resort", "Desert Conservation Reserve"],
+    responseTime: "35-50 min",
+    imageKey: "babAlShams" as const,
+    description: "Bab Al Shams desert resort area in the Dubai Conservation Reserve. We provide recovery service to visitors and travellers in this beautiful but remote desert location.",
+  },
+  {
+    slug: "marmoom",
+    name: "Marmoom",
+    landmarks: ["Marmoom Reserve", "Marmoom Midan", "Cycling Track"],
+    responseTime: "35-50 min",
+    imageKey: "marmoom" as const,
+    description: "Marmoom is a protected desert reserve with a camel racing track and cycling paths. Our recovery trucks serve this remote area for stranded motorists.",
+  },
+  {
+    slug: "dubai-investment-park",
+    name: "Dubai Investment Park (DIP)",
+    landmarks: ["DIP 1", "DIP 2", "Green Community"],
+    responseTime: "20-30 min",
+    imageKey: "dip" as const,
+    description: "Dubai Investment Park is a major mixed-use development with industrial and residential zones. We provide fast recovery across DIP 1, DIP 2, and Green Community.",
+  },
+  {
+    slug: "al-maha",
+    name: "Al Maha",
+    landmarks: ["Al Maha Desert Resort", "Wildlife Reserve", "Conservation Area"],
+    responseTime: "40-55 min",
+    imageKey: "alMaha" as const,
+    description: "Al Maha sits within the Dubai Desert Conservation Reserve. We provide recovery service to this exclusive area, rescuing vehicles from desert terrain.",
+  },
+  {
+    slug: "solar-park",
+    name: "Solar Park",
+    landmarks: ["Mohammed bin Rashid Solar Park", "Desert Road", "Energy Hub"],
+    responseTime: "35-50 min",
+    imageKey: "solarPark" as const,
+    description: "The Mohammed bin Rashid Al Maktoum Solar Park is located deep in the desert. We recover vehicles stranded on the long desert roads leading to this landmark.",
+  },
+  {
+    slug: "murqab",
+    name: "Al Murqab",
+    landmarks: ["Al Murqab", "Desert Village", "Local Roads"],
+    responseTime: "40-55 min",
+    imageKey: "murqab" as const,
+    description: "Al Murqab is a quiet village area in the outskirts of Dubai. Our recovery trucks reach this area for any vehicle breakdown or towing request.",
+  },
+  {
+    slug: "nazwah",
+    name: "Nazwah",
+    landmarks: ["Nazwah", "Hatta Road Area", "Desert Settlement"],
+    responseTime: "45-60 min",
+    imageKey: "nazwah" as const,
+    description: "Nazwah is a remote settlement area accessible via the Hatta Road. Our desert-ready recovery fleet can reach this location for emergency vehicle assistance.",
+  },
+  {
+    slug: "al-rawiyah",
+    name: "Al Rawiyah",
+    landmarks: ["Al Rawiyah Road", "Residential Area", "Local Mosque"],
+    responseTime: "25-35 min",
+    imageKey: "alRawiyah" as const,
+    description: "Al Rawiyah is a residential area along the main road corridor. Our recovery trucks cover this neighbourhood for fast vehicle recovery and towing.",
+  },
+  {
+    slug: "dubai-industrial-city",
+    name: "Dubai Industrial City (DIC)",
+    landmarks: ["DIC", "Industrial Zone", "Logistics Hub"],
+    responseTime: "25-35 min",
+    imageKey: "dic" as const,
+    description: "Dubai Industrial City is a massive industrial free zone. We provide heavy vehicle and car recovery services throughout DIC's sprawling industrial estates.",
+  },
 ];
 
 // Service routes for static generation
@@ -291,9 +507,10 @@ export const serviceRoutes = [
 
 // Generate metadata for location pages
 export function generateLocationMetadata(area: typeof dubaiAreas[0]) {
+  const landmarksStr = area.landmarks.slice(0, 3).join(", ");
   return {
-    title: `Car Recovery ${area.name} - 24/7 Towing Service | ${area.responseTime} Response`,
-    description: `Need car recovery in ${area.name}? 24/7 UAE Recovery offers fast ${area.responseTime} response time. Covering ${area.landmarks.join(", ")}. Call +971 50 464 5696 now!`,
+    title: `Car Recovery ${area.name} | 24/7 Towing & Roadside Assistance | ${area.responseTime}`,
+    description: `Need car recovery in ${area.name}? 24/7 UAE Recovery offers fast ${area.responseTime} response. Flatbed towing, battery jump start, flat tyre, fuel delivery near ${landmarksStr}. Licensed, insured & GPS tracked. Call +971 56 977 3000 now!`,
     keywords: [
       `car recovery ${area.name}`,
       `towing service ${area.name}`,
@@ -301,6 +518,46 @@ export function generateLocationMetadata(area: typeof dubaiAreas[0]) {
       `${area.name} car towing`,
       `24/7 recovery ${area.name}`,
       `roadside assistance ${area.name}`,
+      `emergency towing ${area.name}`,
+      `flatbed towing ${area.name}`,
+      `vehicle recovery ${area.name}`,
+      `car breakdown ${area.name}`,
+      `tow truck ${area.name}`,
+      `battery jump start ${area.name}`,
+      `flat tyre service ${area.name}`,
+      `fuel delivery ${area.name}`,
+      `accident recovery ${area.name}`,
+      `car recovery near ${area.landmarks[0]}`,
+      `${area.name} tow truck near me`,
+      `cheap towing ${area.name}`,
+      `fast car recovery ${area.name} Dubai`,
     ],
   };
+}
+
+// Area type classification for content generation
+export type AreaType = "urban" | "suburban" | "desert" | "industrial" | "highway";
+
+export function getAreaType(slug: string): AreaType {
+  const desertAreas = [
+    "al-qudra", "al-lahbab", "al-faqqa", "al-hayer", "margham",
+    "bab-al-shams", "marmoom", "al-maha", "solar-park", "murqab",
+    "nazwah", "al-lisaili",
+  ];
+  const industrialAreas = [
+    "al-quoz", "al-awir", "ras-al-khor", "dubai-investment-park",
+    "dubai-industrial-city", "jebel-ali", "warsan",
+  ];
+  const highwayAreas = ["sheikh-zayed-road"];
+  const suburbanAreas = [
+    "nad-al-shiba", "dubailand", "academic-city", "dubai-silicon-oasis",
+    "liwan", "town-square", "damac-hills-2", "the-valley", "umm-nahad",
+    "al-rawiyah",
+  ];
+
+  if (desertAreas.includes(slug)) return "desert";
+  if (industrialAreas.includes(slug)) return "industrial";
+  if (highwayAreas.includes(slug)) return "highway";
+  if (suburbanAreas.includes(slug)) return "suburban";
+  return "urban";
 }
